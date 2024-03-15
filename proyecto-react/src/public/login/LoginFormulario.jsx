@@ -10,18 +10,33 @@ import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 export function LoginFormulario(
-    {username, setUsername,password, setPassword,
-    showPassword, setShowPassword,handleSubmit,
-    usernameLabel = "ID Cliente",sectionclassName = "input-container name",
-    nombre = "fname",usernamePlaceholder = "Analista 01",inputType = "email",
-    showArrobaIcon = true,validarclassName = "contraseña",linkclassName = "contraseña-link",
-    buttonclassName = "button-container",buttonclassNamed = "signup-btn custom-btn",
-    inpclassName = "niden",labelpassword = "Contraseña",linkTo = "./validar", 
-    linkText = "Olvidé mi contraseña",buttonText = "Ingresar",hidePassword = false,
-    hideparrafo = false,ptexto = "Crédenciales únicas del proveedor",cargando}) {
+    {username, setUsername,password,
+    setPassword,
+    showPassword, 
+    setShowPassword,
+    handleSubmit,
+    usernameLabel = "ID Cliente",
+    sectionclassName = "input-container name",
+    nombre = "fname",
+    usernamePlaceholder = "Analista 01",
+    inputType = "email",
+    showArrobaIcon = true,
+    validarclassName = "contraseña",
+    linkclassName = "contraseña-link",
+    buttonclassName = "button-container",
+    buttonclassNamed = "signup-btn custom-btn",
+    inpclassName = "niden",
+    labelpassword = "Contraseña",
+    linkTo = "./validar", 
+    linkText = "Olvidé mi contraseña",
+    buttonText = "Ingresar",
+    hidePassword = false,
+    hideparrafo = false,
+    ptexto = "Crédenciales únicas del proveedor",
+    cargando}) {
         
         const loadingMessage = cargando &&  buttonText  === "Cambiar" ? "Cambiando..." : "Validando...";
-        
+
     return (
         <form onSubmit={handleSubmit}>
             <section className="copy">
@@ -74,12 +89,31 @@ export function LoginFormulario(
     )
 }
 
-LoginFormulario.propTypes = {username: PropTypes.string.isRequired,setUsername: PropTypes.func.isRequired,password: PropTypes.string,
-                             setPassword: PropTypes.func,showPassword: PropTypes.bool,setShowPassword: PropTypes.func.isRequired,
-                             handleSubmit: PropTypes.func.isRequired,usernameLabel: PropTypes.string,sectionclassName: PropTypes.string,nombre: PropTypes.string,
-                             usernamePlaceholder: PropTypes.string,inputType: PropTypes.string,showArrobaIcon: PropTypes.bool,hidePassword: PropTypes.bool,
-                             hideparrafo: PropTypes.bool,validarclassName: PropTypes.string,linkclassName: PropTypes.string,buttonclassName: PropTypes.string,
-                             buttonclassNamed: PropTypes.string,inpclassName: PropTypes.string,linkTo: PropTypes.string, linkText: PropTypes.string,buttonText: PropTypes.string,labelpassword: PropTypes.string,ptexto: PropTypes.string,
-                             cargando: PropTypes.bool
+LoginFormulario.propTypes = {username: PropTypes.string.isRequired,
+    setUsername: PropTypes.func.isRequired,
+    password: PropTypes.string,
+    setPassword: PropTypes.func,
+    showPassword: PropTypes.bool,
+    setShowPassword: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    usernameLabel: PropTypes.string,
+    sectionclassName: PropTypes.string,
+    nombre: PropTypes.string,
+    usernamePlaceholder: PropTypes.string,
+    inputType: PropTypes.string,
+    showArrobaIcon: PropTypes.bool,
+    hidePassword: PropTypes.bool,
+    hideparrafo: PropTypes.bool,
+    validarclassName: PropTypes.string,
+    linkclassName: PropTypes.string,
+    buttonclassName: PropTypes.string,
+    buttonclassNamed: PropTypes.string,
+    inpclassName: PropTypes.string,
+    linkTo: PropTypes.string, 
+    linkText: PropTypes.string,
+    buttonText: PropTypes.string,
+    labelpassword: PropTypes.string,
+    ptexto: PropTypes.string,
+    cargando: PropTypes.bool
 
 };

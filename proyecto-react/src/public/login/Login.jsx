@@ -1,19 +1,21 @@
-import {loginState} from '../../hooks/loginState';
-import {loginProcess} from '../../hooks/loginProcess';
+import { LoginState } from '../../hooks/login/LoginState';
+import { LoginProcess } from '../../hooks/login/LoginProcess';
 import {LoginFormulario} from './LoginFormulario';
 import {LoginPublicidad } from './LoginPublicidad';
-import {ErrorModal} from '../modal/errorModal';
+import { ErrorModal } from '../modal/ErrorModal';
+import { validateLoginData } from '../../helpers/login/Validations';
 import "../../styles/login/Login.css"
 
 export function Login() {
     
     const {isModalOpen, setIsModalOpen,errorMessage,setErrorMessage,username, setUsername,
-           password, setPassword,showPassword, setShowPassword} = loginState();
+           password, setPassword,showPassword, setShowPassword} = LoginState();
 
-    const handleLogin = loginProcess(setIsModalOpen,setErrorMessage);
+    const handleLogin = LoginProcess(setIsModalOpen,setErrorMessage);
 
     const handleSubmit = async (event) =>{
         event.preventDefault();
+        const errorMessage = validateLoginData(username,password);
 
         if(errorMessage){
             setIsModalOpen(true);

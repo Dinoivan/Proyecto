@@ -1,6 +1,6 @@
 import { useState} from "react";
 
-export function loginState(){
+export function LoginState(){
 
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [errorMessage, setErrorMessage] = useState("");

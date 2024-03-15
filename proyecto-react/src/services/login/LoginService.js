@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {API} from "../../constants/env"
 
-export async function loginUser(username, password) {
+export async function LoginUser(username, password) {
     
     const body = {username: username,password: password};
 
@@ -18,7 +18,7 @@ export async function loginUser(username, password) {
     }
     }catch(error){
         console.error("Error al iniciar sesión: ",error);
-        return {error: "Ocurrio un error al iniciar sesión. Por favor, verifica tus credenciales"};
+        return {error: `Ocurrio un error al iniciar sesión. Por favor, verifica tus credenciales -> Error: ${error.response.status}`};
     }
 }
 

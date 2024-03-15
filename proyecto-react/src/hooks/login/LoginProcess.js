@@ -1,8 +1,8 @@
-import { loginUser } from "../services/login/loginServices";
+import { LoginUser } from "../../services/login/LoginService";
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from "../contexts/Authutils";
+import { useAuth } from "../../contexts/Authutils";
 
-export function loginProcess(setIsModalOpen,setErrorMessage){
+export function LoginProcess(setIsModalOpen,setErrorMessage){
 
     const navigate = useNavigate();
 
@@ -10,7 +10,7 @@ export function loginProcess(setIsModalOpen,setErrorMessage){
 
     const handleLogin = async (username,password) => {
         
-            const response = await loginUser(username, password);
+            const response = await LoginUser(username, password);
 
             if(response && response.token){
                 setAccessToken(response.token);

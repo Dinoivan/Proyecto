@@ -18,6 +18,20 @@
     align-items: center;
 }
 
+.signup-btn{
+    width: 150px;
+    background: var(--primary-blue);
+    color: white;
+    font-weight: 700;
+    border: 1px solid #D5ECF8;
+    border-radius: 5px;
+    padding: 1.3rem 1.3rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    
+}
+
 .btn__primary{
     border-color: var(--primary-blue);
     background-color: var(--primary-blue);

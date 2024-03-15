@@ -19,7 +19,7 @@ export function validateLoginData(username, password) {
     return null;
 }
 
-export function validateEmail(email){
+export function ValidateEmail(email){
     if (email.trim() === ""){
       return "Por favor, ingresa tu correo";
     }
