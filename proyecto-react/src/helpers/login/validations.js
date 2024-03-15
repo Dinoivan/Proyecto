@@ -1,5 +1,5 @@
 export const isValidPassword = (password) => {
-    const regex = /^[a-zA-Z0-9$%^&*()_+|~=`{}\[\]:";'<>?,.\/-]{1,20}$/;
+    const regex = /^[a-zA-Z0-9 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]{1,20}$/;
     return regex.test(password);
 };
 
