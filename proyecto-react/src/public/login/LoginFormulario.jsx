@@ -35,7 +35,7 @@ export function LoginFormulario(
     ptexto = "Crédenciales únicas del proveedor",
     cargando}) {
         
-        const loadingMessage = cargando &&  buttonText  === "Cambiar" ? "Cambiando..." : "Validando...";
+        const loadingMessage = cargando ?  (buttonText  === "Ingresar" ? 'Ingresando...' : (buttonText === 'Cambiar' ? "Cambiando..." : "Validando...")): '';
 
     return (
         <form onSubmit={handleSubmit}>
@@ -51,8 +51,14 @@ export function LoginFormulario(
 
             <section className={sectionclassName}>
                 <label htmlFor={nombre}>{usernameLabel}</label>
-                <input className={inpclassName} id={nombre} name={nombre} placeholder={usernamePlaceholder} autoFocus type={inputType} maxLength="250" value={username} onChange={e => setUsername(e.target.value)} />
-                {showArrobaIcon && <img src={Arroba} alt="ícono del usuario" className="input-arroba" />}
+                <input className={inpclassName} 
+                id={nombre} name={nombre} 
+                placeholder={usernamePlaceholder} 
+                autoFocus type={inputType} 
+                maxLength="250" value={username} 
+                onChange={e => setUsername(e.target.value)} />
+                {showArrobaIcon && <img src={Arroba} 
+                alt="ícono del usuario" className="input-arroba" />}
                 {!hideparrafo && (
                 <p>{ptexto}</p>)}
             </section>
@@ -60,9 +66,18 @@ export function LoginFormulario(
             {!hidePassword && (
             <section className="input-container password">
                 <label htmlFor="password">{labelpassword}</label>
-                <input id="password" name="password" placeholder="........" type={showPassword ? 'text' : 'password'} maxLength="28" value={password} onChange={e => setPassword(e.target.value)} className={showPassword ? 'has-icon' : ''}/>
+                <input id="password" 
+                name="password" 
+                placeholder="........" 
+                type={showPassword ? 'text' : 'password'} 
+                maxLength="28" value={password} 
+                onChange={e => setPassword(e.target.value)} 
+                className={showPassword ? 'has-icon' : ''}/>
                 <img src={LLave} alt="ícono de password" className="input-icon" />
-                <img src={showPassword ? Show : Esconder} alt="Mostrar/Ocultar contraseña" className="toggle-password-icon" onClick={() => setShowPassword(!showPassword)} />
+                <img src={showPassword ? Show : Esconder} 
+                alt="Mostrar/Ocultar contraseña" 
+                className="toggle-password-icon" 
+                onClick={() => setShowPassword(!showPassword)} />
             </section>
             )}
 

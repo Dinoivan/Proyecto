@@ -3,7 +3,7 @@ export const isValidPassword = (password) => {
     return regex.test(password);
 };
 
-export function validateLoginData(username, password) {
+export function ValidateLoginData(username, password) {
     if (username.trim() === "" && password.trim() === "") {
         return "Por favor, ingresa tu correo y contraseña";
     }
