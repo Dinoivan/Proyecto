@@ -1,0 +1,119 @@
+
+.split-screen{
+    display: flex;
+}
+
+.left{
+    position: relative;
+}
+
+ .right{    
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.right .copy{
+    color: black;
+    text-align: center;
+}
+
+.right .copy h2{
+    font-size: 2.0rem;
+}
+
+
+.right .copy p{
+    margin: 0.2rem 0rem 3.0rem 0rem;
+    font-size: 1.1rem;
+
+}
+
+@media (min-width: 320px) and (max-width: 1019px){
+
+    .split-screen{
+        flex-direction: column;
+    }
+
+    /* .left{
+        display: block;
+    } */
+
+    .right{
+        margin-top: 55px;
+    }
+
+    .image-container{
+        height: 110px;
+    }
+
+    .input-container.name p{
+        top: 55px;
+        color: #888;
+        margin-top: 4px;
+        font-size: 1.0rem;
+    }
+
+    #password::-webkit-input-placeholder {
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    .contraseña{
+        top: 430px;
+    }
+
+    .button-container{
+        top: 355px;
+    }
+
+    .footer-formulario{
+        top: 580px;
+    }
+}
+
+@media (min-width: 1020px){
+    .split-screen{
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .left{
+        flex: 1.2;
+    }
+
+    .right{
+        margin-bottom: 70px;
+    }
+
+    .right{
+        flex: 0.51;
+    }
+
+    .image-container{
+        height: 118px;
+    }
+
+    #password::-webkit-input-placeholder {
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+
+    .contraseña{
+        top: 440px;
+    }
+   
+    .input-container.name p{
+        top: 57px;
+        color: #888;
+    }
+
+    .button-container{
+        top: 355px;
+    }
+
+    .footer-formulario{
+        top: 550px;
+    }
+
+}

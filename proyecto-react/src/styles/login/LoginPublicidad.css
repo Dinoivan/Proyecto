@@ -1,0 +1,29 @@
+.left{
+    background:url("../../assets/imagenes/Celima.jpg");
+    background-size: 100% 100%;
+}
+
+.left .copy{
+    color: white;
+    position: absolute;
+    top: 74%;
+    left: 13%;
+}
+
+.left .copy h1{
+    font-size: 3.3rem;
+}
+
+.left .copy h1::after{
+    content: "";
+    display: block;
+    margin-top: 15px;
+    border-bottom: 2px solid #fff;
+    width: 170px;
+    margin-bottom: 15px;
+}
+
+.left .copy p{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
