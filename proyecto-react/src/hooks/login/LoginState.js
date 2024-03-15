@@ -7,6 +7,7 @@ const [errorMessage, setErrorMessage] = useState("");
 const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");
 const [showPassword, setShowPassword] = useState(false);
+const [isLoading,setIsLoading] = useState(false);
 
 return {
 
@@ -15,7 +16,7 @@ return {
     username, setUsername,
     password, setPassword,
     showPassword, setShowPassword,
-
+    isLoading,setIsLoading
 };
 
 }
