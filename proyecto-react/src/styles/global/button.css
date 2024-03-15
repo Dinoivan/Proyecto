@@ -1,0 +1,30 @@
+:root{
+    line-height: 1.2;
+    --primary-blue:#2660A3;
+    --primary-dark-blue: #154a86;
+}
+
+.btn{
+    background-color: white;
+    min-width: 100px;
+    font-weight: 400;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;  
+    border-radius: 5px;
+    font-family: inherit;
+    cursor: pointer;
+    align-items: center;
+}
+
+.btn__primary{
+    border-color: var(--primary-blue);
+    background-color: var(--primary-blue);
+    color: #fff;
+    padding: 7px 12px;
+}
+
+.btn__m{
+  border-color: rgb(210, 205, 205);
+}
