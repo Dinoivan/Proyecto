@@ -2,8 +2,7 @@ import {loginState} from '../../hooks/loginState';
 import {loginProcess} from '../../hooks/loginProcess';
 import {LoginFormulario} from './LoginFormulario';
 import {LoginPublicidad } from './LoginPublicidad';
-// import { ErrorModal } from '../modal/errorModal';
-import {ErrorModal} from '../modal/ErrorModal';
+import {ErrorModal} from '../modal/errorModal';
 import "../../styles/login/Login.css"
 
 export function Login() {
