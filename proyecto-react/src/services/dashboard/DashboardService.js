@@ -10,7 +10,7 @@ export async function UserInformation(token){
                 Authorization: `Token ${token}`
             }
         });
-        return response.data;
+        return response.data.first_name;
     }catch(error){
         console.error("Error al obtener los datos del usuario: ",error);
         return {error: `No se puede al obtener información del usuario -> Error: ${error.response.status}`}

@@ -8,6 +8,7 @@ export function DashboardState(){
     const [userEmail, setUserEmail] = useState("");
     const [loading,setLoading] = useState(true);
     const [userIniciales, setUserIniciales] = useState("");
+    const [user,setUser] =  useState(null);
    
     
 
@@ -18,6 +19,8 @@ return {
     loading,setLoading,
     userEmail,setUserEmail,
     userIniciales,setUserIniciales,
+    user,setUser
 };
 
 }
+

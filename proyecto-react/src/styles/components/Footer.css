@@ -1,0 +1,37 @@
+
+.ContainerFooter{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  
+  }
+  
+  .ContainerFotter__parrafo{
+    margin-right: 45px;
+  }
+  
+  .ContainerFooter__parrafo p{
+    font-size: 1.3rem;
+  }
+  
+  @media (min-width: 375px) and (max-width: 1019px){
+
+    .ContainerFooter{
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+  
+    .ContainerFotter__parrafo{
+      margin-right: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .ContainerFooter p{
+      font-size: 1.1rem;
+    }
+
+}
+        

@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F9F9FB;
+}
+
+.main{
+    margin-left: 100px;
+}
+
+@media((min-width: 375px) and (max-width: 1019px)){
+    .main{
+      margin-left: 0;
+    }
+  
+    .main--abierto{
+      margin-left: 0;
+    }
+  }
