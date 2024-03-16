@@ -29,14 +29,14 @@
 
 }
 
-@media (min-width: 320px) and (max-width: 1019px){
+@media (min-width: 375px) and (max-width: 1019px){
 
     .split-screen{
         flex-direction: column;
     }
 
      .left{
-        display: block;
+        display: none;
     }
 
     .right{
