@@ -42,7 +42,7 @@ export function MainContent(){
                     </section>
 
                     <section className="Icono">
-                        <span><FontAwesomeIcon icon={faArrowRight}/></span>
+                       <Link to="/modulos/exportaciones/pedidos"><span><FontAwesomeIcon icon={faArrowRight} /></span></Link>
                     </section>
                 </article>
 

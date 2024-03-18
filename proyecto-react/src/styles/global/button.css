@@ -42,3 +42,22 @@
 .btn__m{
   border-color: rgb(210, 205, 205);
 }
+
+.brn--medium{
+    min-width: 150px;
+}
+
+.btn--ico{
+    padding: 4px 12px;
+}
+
+.btn__secondary--outline{
+    border-color: #fff;
+    background-color: var(--primary-blue);
+    color: #fff;   
+}
+
+.btn--ico i, .btn--ico em{
+    margin-right: 7px;
+    font-size: 1.7rem;
+}
