@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import { faGreaterThan,faTimes,faLessThan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../../styles/components/SideMenu.css"
@@ -7,7 +7,7 @@ import "../../styles/components/SideMenu.css"
 export function SideMenu({menuOpen,setMenuOpen}){
 
     return (
-        <section className={`menu_side ${menuOpen ? '': 'menu__side_move'}`}>
+        <section className={`menu__side ${menuOpen ? '': 'menu__side_move'}`}>
 
             <section className='options__menu'>
                 <NavLink exact="true" to="/dashboard">
@@ -98,20 +98,20 @@ export function SideMenu({menuOpen,setMenuOpen}){
 
 
 
-                    <NavLink  exact="true" to="#">
+                    <Link  to="#">
                     <div className={`option ${menuOpen ? "menuOpen" : ""}`}>
                         <section className='option__user'>
                             <span></span>
                         </section>
                         <h4>Mantenimiento de usuarios</h4>
                     </div>
-                    </NavLink>
+                    </Link>
 
             </section>
 
             <div>
                 <div className={menuOpen ? "icon-menu--open": "icon__menu"}>
-                    <FontAwesomeIcon icon={ menuOpen ? faLessThan : faGreaterThan } onClick={() => setMenuOpen(!menuOpen)}/>
+                    <FontAwesomeIcon icon={ menuOpen ? faGreaterThan  : faLessThan} onClick={() => setMenuOpen(!menuOpen)}/>
                 </div>
 
                 <div className="icon__cerrar">

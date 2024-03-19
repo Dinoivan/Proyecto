@@ -84,3 +84,20 @@ export async function EliminarPedidos(token,pedidosEliminados){
         return {error: `Sucedió un error al eliminar pedidos`}
     }
 }
+
+//Responsables de exportaciones
+export async function ResposablesExportaciones(token){
+    try{
+        const response = await axios.get(`${API}${basePathfindAll}/responsable/?type=REGULAR`,{
+            headers: {
+                Authorization: `Token ${token}`
+            },
+        });
+        const responsableNombres = response.data.result.map((usuario) => usuario.name);
+        return responsableNombres;
+    }catch(error){
+        console.error("Error al recuperar usuarios exportaciones",error);
+        return {error: "Error al recuperar respesables de exportaciones"}
+    }
+}
+
