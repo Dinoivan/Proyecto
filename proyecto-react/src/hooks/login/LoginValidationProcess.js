@@ -1,5 +1,5 @@
 import { UserVerification,Forgotpassword,ConfirmVerificationCode} from "../../services/login/LoginValidationService"
-import { ValidateEmail } from "../../helpers/login/Validations";
+import { ValidateEmail } from "../../helpers/login/validations";
 
 export function ValidateEmailOnPlatform(email,setCurrentStep,setModalData,setShowModal,setErrorMessageEmail,setCargando){
 

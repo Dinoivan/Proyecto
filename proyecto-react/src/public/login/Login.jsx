@@ -3,7 +3,7 @@ import { LoginProcess } from '../../hooks/login/LoginProcess';
 import {LoginFormulario} from './LoginFormulario';
 import {LoginPublicidad } from './LoginPublicidad';
 import { ErrorModal } from '../modal/ErrorModal';
-import { ValidateLoginData } from '../../helpers/login/Validations';
+import { ValidateLoginData } from '../../helpers/login/validations';
 import "../../styles/login/Login.css"
 
 export function Login() {
